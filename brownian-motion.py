@@ -13,11 +13,11 @@ space = pymunk.Space()
 
 FPS = 60 # Frame rate
 e = 1 # Elasticity
-R = 10 # Radius of big particle
+R = 20 # Radius of big particle
 r = 5 # Radius of small particle
 rho = 1 # Density of big particle
-n = 100 # Number of little particles
-T = 10000000 # Temperature
+n = 500 # Number of little particles
+T = 100000 # Temperature
 points = [] # Tracking points where the large particle goes
 
 # Start position for large particle
