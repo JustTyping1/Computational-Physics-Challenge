@@ -2,14 +2,13 @@ import matplotlib.pyplot as plt
 from matplotlib.widgets import RadioButtons
 import numpy as np
 
-work_function = {
-    "lead": 4.14,
-    "gold": 5.1,
-    "silver": 4.73,
-    "copper": 4.7,
-    "aluminium": 4.08,
-    "iron": 4.5,
-    "zinc": 4.3
+Tevalues = {
+    "lead": 79,
+    "gold": 124,
+    "silver": 169,
+    "copper": 258,
+    "aluminium": 321,
+    "iron": 352
 }
 
 h = 6.62607015e-34
@@ -43,7 +42,7 @@ radio = RadioButtons(radio_ax, list(work_function.keys()))
 
 def update(label):
     line.set_ydata(stopping_voltage(label))
-    ax.set_title(f"Photoelectric Effect ({label})")
+    ax.set_title(f"Wavelength of incedent light vs stopping voltage for ({label})")
     ax.relim()
     ax.autoscale_view()
     fig.canvas.draw_idle()
